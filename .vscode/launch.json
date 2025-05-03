@@ -1,0 +1,104 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "problema1",
+            "request": "launch",
+            "mainClass": "problema1",
+            "projectName": "Proyecto -HPA2_5ea91e41"
+        },
+        {
+            "type": "java",
+            "name": "VotacionAvanzada",
+            "request": "launch",
+            "mainClass": "VotacionAvanzada",
+            "projectName": "Proyecto -HPA2_5ea91e41"
+        },
+        {
+            "type": "java",
+            "name": "niidea",
+            "request": "launch",
+            "mainClass": "niidea",
+            "projectName": "Proyecto -HPA2_5ea91e41"
+        },
+        {
+            "type": "java",
+            "name": "problema2Ejem",
+            "request": "launch",
+            "mainClass": "problema2Ejem",
+            "projectName": "Proyecto -HPA2_5ea91e41"
+        },
+        {
+            "type": "java",
+            "name": "problema2",
+            "request": "launch",
+            "mainClass": "problema2",
+            "projectName": "Proyecto -HPA2_5ea91e41"
+        },
+        {
+            "type": "java",
+            "name": "problema1Pane",
+            "request": "launch",
+            "mainClass": "problema1Pane",
+            "projectName": "Proyecto -HPA2_5ea91e41"
+        },
+        {
+            "type": "java",
+            "name": "problema1Pane",
+            "request": "launch",
+            "mainClass": "problema1Pane",
+            "projectName": "asd_2cd8b3fc"
+        },
+        {
+            "type": "java",
+            "name": "problema1Pane",
+            "request": "launch",
+            "mainClass": "problema1Pane",
+            "projectName": "Proyecto-HPA2_da86f7cb"
+        },
+        {
+            "type": "java",
+            "name": "problema2Ejem",
+            "request": "launch",
+            "mainClass": "problema2Ejem",
+            "projectName": "Proyecto-HPA2_da86f7cb"
+        },
+        {
+            "type": "java",
+            "name": "problema2",
+            "request": "launch",
+            "mainClass": "problema2",
+            "projectName": "Proyecto-HPA2_ac6c42c"
+        },
+        {
+            "type": "java",
+            "name": "problema1",
+            "request": "launch",
+            "mainClass": "problema1",
+            "projectName": "Proyecto-HPA2_ac6c42c"
+        },
+        {
+            "type": "java",
+            "name": "problema1",
+            "request": "launch",
+            "mainClass": "problema1",
+            "projectName": "Proyecto-HPA2_da86f7cb"
+        },
+        {
+            "type": "java",
+            "name": "problema2",
+            "request": "launch",
+            "mainClass": "problema2",
+            "projectName": "Proyecto-HPA2_da86f7cb"
+        },
+        {
+            "type": "jdk",
+            "request": "launch",
+            "name": "Launch Java App"
+        }
+    ]
+}
