@@ -9,6 +9,27 @@
             "name": "problema1",
             "request": "launch",
             "mainClass": "problema1",
+            "projectName": "Proyecto1--HPA-II_2bc79e1b"
+        },
+        {
+            "type": "java",
+            "name": "problema2",
+            "request": "launch",
+            "mainClass": "problema2",
+            "projectName": "Proyecto1--HPA-II_2bc79e1b"
+        },
+        {
+            "type": "java",
+            "name": "problema1Pane",
+            "request": "launch",
+            "mainClass": "problema1Pane",
+            "projectName": "Proyecto1--HPA-II_2bc79e1b"
+        },
+        {
+            "type": "java",
+            "name": "problema1",
+            "request": "launch",
+            "mainClass": "problema1",
             "projectName": "Proyecto -HPA2_5ea91e41"
         },
         {

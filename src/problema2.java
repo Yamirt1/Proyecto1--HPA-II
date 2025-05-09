@@ -146,18 +146,10 @@ public class problema2 {
                                         }
                                     } else if (candidatElegido.equals("Martin Torrijos")) {
                                         switch (continuar3) {
-                                            case "1":
-                                                torrijosPA += cantidad;
-                                                break;
-                                            case "2":
-                                                torrijosPO += cantidad;
-                                                break;
-                                            case "3":
-                                                torrijosCH += cantidad;
-                                                break;
-                                            case "4":
-                                                torrijosCO += cantidad;
-                                                break;
+                                            case "1" -> torrijosPA += cantidad;
+                                            case "2" -> torrijosPO += cantidad;
+                                            case "3" -> torrijosCH += cantidad;
+                                            case "4" -> torrijosCO += cantidad;
                                         }
                                     }
                                 } catch (NumberFormatException e) {
