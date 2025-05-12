@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "nuevo",
+            "request": "launch",
+            "mainClass": "nuevo",
+            "projectName": "Proyecto1--HPA-II_354e5429"
+        },
+        {
+            "type": "java",
+            "name": "problema2",
+            "request": "launch",
+            "mainClass": "problema2",
+            "projectName": "Proyecto1--HPA-II_354e5429"
+        },
+        {
+            "type": "java",
             "name": "problema1",
             "request": "launch",
             "mainClass": "problema1",
