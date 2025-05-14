@@ -1,3 +1,4 @@
+// Proyecto realizado por: Edwin Tuñón y Almikar NIño 2025
 import javax.swing.JOptionPane;
 
 public class problema2ME {
