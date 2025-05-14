@@ -244,16 +244,16 @@ public class problema2ME {
 
                 switch (provinciaBlancoSeleccionada) {
                     case "1":
-                        votosBlancoPA += cantidadBlanco;
+                        votBlancoPA += cantidadBlanco;
                         break;
                     case "2":
-                        votosBlancoPO += cantidadBlanco;
+                        votBlancoPO += cantidadBlanco;
                         break;
                     case "3":
-                        votosBlancoCH += cantidadBlanco;
+                        votBlancoCH += cantidadBlanco;
                         break;
                     case "4":
-                        votosBlancoCO += cantidadBlanco;
+                        votBlancoCO += cantidadBlanco;
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Provincia Inválida. Intente nuevamente.");
