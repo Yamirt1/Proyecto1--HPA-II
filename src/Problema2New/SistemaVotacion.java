@@ -1,3 +1,4 @@
+// Proyecto realizado por Edwin Tuñón y Amilkar Niño
 package Problema2New;
 
 import javax.swing.JOptionPane;
@@ -422,8 +423,8 @@ public class SistemaVotacion {
         JOptionPane.showMessageDialog(null, conteo);
     }
 
-    private String obtenerVotosBlancoPorOrdenados(provincia panama, provincia panamaoeste, provincia colon, provincia chiriqui){
-    int blancoPanama = panama.getVotosBlanco();
+    private String obtenerVotosBlancoPorOrdenados(provincia panama, provincia panamaoeste, provincia colon, provincia chiriqui) {
+        int blancoPanama = panama.getVotosBlanco();
         int blancoPanamaOeste = panamaoeste.getVotosBlanco();
         int blancoChiriqui = chiriqui.getVotosBlanco();
         int blancoColon = colon.getVotosBlanco();
