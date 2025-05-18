@@ -1,3 +1,4 @@
+// codigo sin metodos, lo mas basico posible
 import javax.swing.JOptionPane;
 
 public class problema2{

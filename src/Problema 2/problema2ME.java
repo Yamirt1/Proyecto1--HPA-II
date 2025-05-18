@@ -1,4 +1,4 @@
-// Proyecto realizado por: Edwin Tuñón y Amilkar NIño 2025
+// codigo anterior pero se le agregaron metodos para hacerlo mas ordenado
 import javax.swing.JOptionPane;
 
 public class problema2ME {
