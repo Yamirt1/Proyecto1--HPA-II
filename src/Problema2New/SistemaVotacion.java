@@ -232,13 +232,15 @@ public class SistemaVotacion {
         }
     }
 
-    private void mostrarVotosPorProvincia() {
-        // Provincia de Panamá
+    private String obtenerVotosPorProvincia(candidato mulino, candidato lombana, candidato torrijos) {
+        String conteo = "VOTOS POR PROVINCIA\n\n";
+
         int votosMulino = mulino.getVotosPanama();
         int votosLombana = lombana.getVotosPanama();
         int votosTorrijos = torrijos.getVotosPanama();
 
-        String conteo = "VOTOS POR PROVINCIA\n\nProvincia de Panamá:\n";
+        // prov Panamá
+        conteo += "Provincia de Panamá:\n";
         if (votosMulino >= votosLombana && votosMulino >= votosTorrijos) {
             conteo += "1. José Raúl Mulino: " + votosMulino + " votos\n";
             if (votosLombana >= votosTorrijos) {
@@ -268,7 +270,7 @@ public class SistemaVotacion {
             }
         }
 
-        // Provincia de Panamá Oeste
+        // prov Panamá Oeste
         int mulinoPO = mulino.getVotosPanamaOeste();
         int lombanaPO = lombana.getVotosPanamaOeste();
         int torrijosPO = torrijos.getVotosPanamaOeste();
@@ -302,7 +304,7 @@ public class SistemaVotacion {
             }
         }
 
-        // Provincia de Colón
+        // prov Colón
         int mulinoCO = mulino.getVotosColon();
         int lombanaCO = lombana.getVotosColon();
         int torrijosCO = torrijos.getVotosColon();
@@ -336,7 +338,7 @@ public class SistemaVotacion {
             }
         }
 
-        // Provincia de Chiriquí
+        // prov Chiriquí
         int mulinoCH = mulino.getVotosChiriqui();
         int lombanaCH = lombana.getVotosChiriqui();
         int torrijosCH = torrijos.getVotosChiriqui();
@@ -369,51 +371,59 @@ public class SistemaVotacion {
                 conteo += "3. José Raúl Mulino: " + mulinoCH + " votos\n";
             }
         }
+        return conteo;
+    }
 
+    private void mostrarVotosPorProvincia() {
+        String conteo = obtenerVotosPorProvincia(mulino, lombana, torrijos);
         JOptionPane.showMessageDialog(null, conteo);
+    }
+
+    private String obtenerVotosTotalesPorCandidato(candidato mulino, candidato lombana, candidato torrijos) {
+        int total1 = mulino.getTotalVotos();
+        int total2 = lombana.getTotalVotos();
+        int total3 = torrijos.getTotalVotos();
+
+        String conteo = "VOTOS TOTALES POR CANDIDATO\n\n";
+
+        if (total1 >= total2 && total1 >= total3) {
+            conteo += "1. " + mulino.getNombre() + ": " + total1 + " votos\n";
+            if (total2 >= total3) {
+                conteo += "2. " + lombana.getNombre() + ": " + total2 + " votos\n";
+                conteo += "3. " + torrijos.getNombre() + ": " + total3 + " votos\n";
+            } else {
+                conteo += "2. " + torrijos.getNombre() + ": " + total3 + " votos\n";
+                conteo += "3. " + lombana.getNombre() + ": " + total2 + " votos\n";
+            }
+        } else if (total2 >= total1 && total2 >= total3) {
+            conteo += "1. " + lombana.getNombre() + ": " + total2 + " votos\n";
+            if (total1 >= total3) {
+                conteo += "2. " + mulino.getNombre() + ": " + total1 + " votos\n";
+                conteo += "3. " + torrijos.getNombre() + ": " + total3 + " votos\n";
+            } else {
+                conteo += "2. " + torrijos.getNombre() + ": " + total3 + " votos\n";
+                conteo += "3. " + mulino.getNombre() + ": " + total1 + " votos\n";
+            }
+        } else {
+            conteo += "1. " + torrijos.getNombre() + ": " + total3 + " votos\n";
+            if (total1 >= total2) {
+                conteo += "2. " + mulino.getNombre() + ": " + total1 + " votos\n";
+                conteo += "3. " + lombana.getNombre() + ": " + total2 + " votos\n";
+            } else {
+                conteo += "2. " + lombana.getNombre() + ": " + total2 + " votos\n";
+                conteo += "3. " + mulino.getNombre() + ": " + total1 + " votos\n";
+            }
+        }
+        return conteo;
     }
 
     private void mostrarVotosTotales() {
-        int totalMulino = mulino.getVotosPanama() + mulino.getVotosPanamaOeste() + mulino.getVotosChiriqui() + mulino.getVotosColon();
-        int totalLombana = lombana.getVotosPanama() + lombana.getVotosPanamaOeste() + lombana.getVotosChiriqui() + lombana.getVotosColon();
-        int totalTorrijos = torrijos.getVotosPanama() + torrijos.getVotosPanamaOeste() + torrijos.getVotosChiriqui() + torrijos.getVotosColon();
-
-        String conteo = "VOTOS TOTALES POR CANDIDATO (MAYOR A MENOR):\n";
-
-        if (totalMulino >= totalLombana && totalMulino >= totalTorrijos) {
-            conteo += "1. José Raúl Mulino: " + totalMulino + " votos\n";
-            if (totalLombana >= totalTorrijos) {
-                conteo += "2. Ricardo Lombana: " + totalLombana + " votos\n";
-                conteo += "3. Martin Torrijos: " + totalTorrijos + " votos\n";
-            } else {
-                conteo += "2. Martin Torrijos: " + totalTorrijos + " votos\n";
-                conteo += "3. Ricardo Lombana: " + totalLombana + " votos\n";
-            }
-        } else if (totalLombana >= totalMulino && totalLombana >= totalTorrijos) {
-            conteo += "1. Ricardo Lombana: " + totalLombana + " votos\n";
-            if (totalMulino >= totalTorrijos) {
-                conteo += "2. José Raúl Mulino: " + totalMulino + " votos\n";
-                conteo += "3. Martin Torrijos: " + totalTorrijos + " votos\n";
-            } else {
-                conteo += "2. Martin Torrijos: " + totalTorrijos + " votos\n";
-                conteo += "3. José Raúl Mulino: " + totalMulino + " votos\n";
-            }
-        } else {
-            conteo += "1. Martin Torrijos: " + totalTorrijos + " votos\n";
-            if (totalMulino >= totalLombana) {
-                conteo += "2. José Raúl Mulino: " + totalMulino + " votos\n";
-                conteo += "3. Ricardo Lombana: " + totalLombana + " votos\n";
-            } else {
-                conteo += "2. Ricardo Lombana: " + totalLombana + " votos\n";
-                conteo += "3. José Raúl Mulino: " + totalMulino + " votos\n";
-            }
-        }
-
+        String conteo = obtenerVotosTotalesPorCandidato(mulino, lombana, torrijos);
         JOptionPane.showMessageDialog(null, conteo);
     }
 
-    private void mostrarVotosBlancoOrdenados() {
-        int blancoPanama = panama.getVotosBlanco();
+    private String obtenerVotosBlancoPorOrdenados(provincia panama, provincia panamaoeste, provincia colon, provincia chiriqui){
+    int blancoPanama = panama.getVotosBlanco();
         int blancoPanamaOeste = panamaoeste.getVotosBlanco();
         int blancoChiriqui = chiriqui.getVotosBlanco();
         int blancoColon = colon.getVotosBlanco();
@@ -542,6 +552,11 @@ public class SistemaVotacion {
             }
         }
 
+        return conteoBlancos;
+    }
+
+    private void mostrarVotosBlancoOrdenados() {
+        String conteoBlancos = obtenerVotosBlancoPorOrdenados(panama, panamaoeste, colon, chiriqui);
         JOptionPane.showMessageDialog(null, conteoBlancos);
     }
 }
