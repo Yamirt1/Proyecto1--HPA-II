@@ -1,4 +1,3 @@
-// Amilkar    
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,24 +26,24 @@ public class problema1 {
                     String palabra = reader.readLine();
 
                     System.out.println("-------------------------------");
-                    System.out.print("Palabra en codigo ACSII: ");
+                    System.out.print("Palabra en código ASCII: ");
                     for (int i = 0; i < palabra.length(); i++) {
                         int ascii = palabra.charAt(i);
-
                         System.out.print(ascii + " ");
                     }
 
-                    String volver;
+                    int volver;
                     do {
-                        System.out.println("\n-------------------------------");
-                        System.out.println("\nPresione 0 para volver al menu principal!");
-                        System.out.println("-------------------------------");
-                        volver = reader.readLine();
-                    } while (!volver.equals("0"));
+                        System.out.println("\n\n-------------------------------");
+                        System.out.println("Presione 0 para volver al menú principal!");
+                        System.out.println("-------------------------------"); 
+                        volver = System.in.read();
+                        while (System.in.available() > 0) System.in.read(); // limpiar buffer
+                    } while (volver != '0');
                 }
 
                 case 2 -> {
-                    System.out.println("\nEscribe con numeros lo que deseas desencriptar");
+                    System.out.println("\nEscribe con números lo que deseas desencriptar");
                     System.out.println("-------------------------------");
                     String textoEncriptado = reader.readLine();
 
@@ -58,13 +57,14 @@ public class problema1 {
                     }
                     System.out.println();
 
-                    String volver;
+                    int volver;
                     do {
-                        System.out.println("-------------------------------");
-                        System.out.println("\nPresione 0 para volver al menú principal:");
+                        System.out.println("\n-------------------------------");
+                        System.out.println("Presione 0 para volver al menú principal:");
                         System.out.println("------------------------------");
-                        volver = reader.readLine();
-                    } while (!volver.equals("0"));
+                        volver = System.in.read();
+                        while (System.in.available() > 0) System.in.read(); // limpiar buffer
+                    } while (volver != '0');
                 }
 
                 case 3 -> {
@@ -73,7 +73,7 @@ public class problema1 {
                 }
 
                 default -> {
-                    System.out.println("Opción no valida");
+                    System.out.println("Opción no válida");
                 }
             }
         } while (opcion != 3);
